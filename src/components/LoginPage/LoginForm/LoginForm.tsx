@@ -1,24 +1,23 @@
 import React, { useState } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import styles from './LoginForm.module.css'
-
-type FormValues = {
-    email: string
-    password: string
-}
+import { useActions } from '../../../hooks/actions'
+import { ILoginData } from '../../../models'
 
 const LoginForm: React.FC = () => {
     const [activeInput, setActiveInput] = useState<'inputEmail' | 'inputPassword' | null>(null)
+    const { loginFetch } = useActions()
 
     const {
         register,
         handleSubmit,
         formState: { errors },
         reset
-    } = useForm<FormValues>()
+    } = useForm<ILoginData>()
 
-    const onSubmit: SubmitHandler<FormValues> = data => {
+    const onSubmit: SubmitHandler<ILoginData> = data => {
         console.log(data)
+        loginFetch(data)
         reset()
     }
 

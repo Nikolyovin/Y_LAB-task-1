@@ -12,7 +12,7 @@
     font-weight: 600;
     color: #ab47bc;
     color: #b0bec5;
-    transition: color 0.5s ease; 
+    transition: color 0.5s ease;
 }
 
 .label {
@@ -22,7 +22,7 @@
 }
 
 .labelActive {
-    color:#ab47bc;
+    color: #ab47bc;
     font-weight: 600;
 }
 
@@ -30,13 +30,13 @@
     all: initial;
     border-radius: 5px;
     margin-bottom: 5px;
-    height: 30px;
+    height: 40px;
     background-color: transparent;
     border: 2px solid #b0bec5;
     padding: 0 0 0 5px;
     color: #b0bec5;
     font-weight: 600;
-    transition: border-color 0.5s ease; 
+    transition: border-color 0.5s ease;
 }
 
 .input:focus {
@@ -45,16 +45,18 @@
     margin-bottom: 3px;
 }
 
-.inputError{
+.inputError {
     border-color: #e91e63;
 }
 
-.textError{
-color: #e91e63;
+.textError {
+    color: #e91e63;
 }
 
 .buttonSubmit {
+    height: 50px;
     margin-top: 20px;
+    margin-bottom: 20px;
     background-color: #9c27b0;
     color: #fff;
     padding: 10px 20px;
@@ -62,14 +64,13 @@ color: #e91e63;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease; 
-  }
-  
-  .buttonSubmit:hover {
-    background-color: #7b1fa2; 
-  }
-  
-  .buttonSubmit:active {
-    background-color: #6a1b9a; 
-  }
-  
+    transition: background-color 0.3s ease;
+}
+
+.buttonSubmit:hover {
+    background-color: #7b1fa2;
+}
+
+.buttonSubmit:active {
+    background-color: #6a1b9a;
+}

@@ -1,7 +1,7 @@
-import LoginPage from "./components/LoginPage/LoginPage";
+import AppRouter from './components/common/AppRouter'
 
 const App = () => {
-  return <LoginPage />;
-};
+    return <AppRouter />
+}
 
-export default App;
+export default App
