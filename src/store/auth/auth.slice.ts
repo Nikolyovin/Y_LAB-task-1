@@ -1,7 +1,5 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 import { ILoginData, ILoginResponse } from '../../models'
-// import { ILoginData, IRegistrationData } from '../../models/uiModels'
-// import { ACTIVE_USER } from '../../helpers/constants'
 
 const IS_AUTH = 'isAuth'
 const ACTIVE_USER = 'ACTIVE_USER'
@@ -9,19 +7,13 @@ const ACTIVE_USER = 'ACTIVE_USER'
 interface InitialStateType {
     isAuth: boolean
     isLoading: boolean
-    // errorLogin: string
-    // errorRegistration: string
-    // successRegistration: string
     activeUser: string
 }
 
 const initialState: InitialStateType = {
-    isAuth: JSON.parse(localStorage.getItem(IS_AUTH) ?? '[]'),
+    isAuth: JSON.parse(localStorage.getItem(IS_AUTH) ?? 'false'),
     isLoading: false,
-    // errorLogin: '',
-    // errorRegistration: '',
-    // successRegistration: '',
-    activeUser: localStorage.getItem(ACTIVE_USER) || '[]'
+    activeUser: localStorage.getItem(ACTIVE_USER) || ''
 }
 
 export const authSlice = createSlice({
@@ -36,7 +28,6 @@ export const authSlice = createSlice({
             state.isLoading = true
         },
         loginSuccess(state, action: PayloadAction<ILoginResponse>) {
-            // state.errorLogin = ''
             state.isLoading = false
             state.isAuth = true
             localStorage.setItem(IS_AUTH, JSON.stringify(true))

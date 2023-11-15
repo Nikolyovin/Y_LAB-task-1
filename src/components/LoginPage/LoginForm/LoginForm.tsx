@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import { FC, useState } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import styles from './LoginForm.module.css'
 import { useActions } from '../../../hooks/actions'
 import { ILoginData } from '../../../models'
 
-const LoginForm: React.FC = () => {
+const LoginForm: FC = () => {
     const [activeInput, setActiveInput] = useState<'inputEmail' | 'inputPassword' | null>(null)
     const { loginFetch } = useActions()
 
@@ -47,7 +47,7 @@ const LoginForm: React.FC = () => {
             />
             {errors.password && <p className={styles.textError}>{errors.password.message}</p>}
 
-            <button className={styles.buttonSubmit} type='submit'>
+            <button className='button' type='submit'>
                 Войти
             </button>
         </form>

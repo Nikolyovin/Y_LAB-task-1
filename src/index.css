@@ -47,11 +47,31 @@ table {
 
 body{
     background-color: #263238;
-    /* background-color: #4a148c; */
 	font-family: 'Open Sans', sans-serif;
 }
 
 h1,p,span, label{
-    /* color: #90a4ae; */
     color: #b0bec5;
+}
+
+.button {
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #9c27b0;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #7b1fa2;
+}
+
+.button:active {
+    background-color: #6a1b9a;
 }

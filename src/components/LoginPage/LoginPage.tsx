@@ -1,9 +1,10 @@
+import { FC } from 'react'
 import { useAppSelector } from '../../hooks/redux'
 import LoginForm from './LoginForm/LoginForm'
 import styles from './LoginPage.module.css'
 import ReactLoading from 'react-loading'
 
-const LoginPage = () => {
+const LoginPage: FC = () => {
     const { isLoading } = useAppSelector(state => state.auth)
     return (
         <div className={styles.conteiner}>

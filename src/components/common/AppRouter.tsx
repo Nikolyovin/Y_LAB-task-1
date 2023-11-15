@@ -2,8 +2,9 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import { useAppSelector } from '../../hooks/redux'
 import LoginPage from '../LoginPage/LoginPage'
 import MainPage from '../MainPage/MainPage'
+import { FC } from 'react'
 
-const AppRouter = () => {
+const AppRouter: FC = () => {
     const { isAuth } = useAppSelector(state => state.auth)
     return isAuth ? (
         <Routes>

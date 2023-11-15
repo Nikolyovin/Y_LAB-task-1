@@ -1,0 +1,11 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    font-size: 28px;
+}
