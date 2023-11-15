@@ -1,1 +1,1 @@
-### https://y-lab-task-1.vercel.app/login
+### https://y-lab-task-1.vercel.app
